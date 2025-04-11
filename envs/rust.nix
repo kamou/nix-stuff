@@ -1,18 +1,11 @@
 { pkgs ? import <nixpkgs> { } }:
 
-pkgs.mkShell {
-  buildInputs = [
-    pkgs.rustup
-    pkgs.pkg-config
-    pkgs.rust-analyzer
+let
+  rustTools = import ./rust-tools.nix { inherit pkgs; };
+in
 
-    # Common build tools
-    pkgs.cmake
-    pkgs.zlib
-    pkgs.gcc
-    pkgs.libclang
-    pkgs.clang
-  ];
+pkgs.mkShell {
+  buildInputs = rustTools;
 
   shellHook = ''
     export LIBCLANG_PATH="${pkgs.libclang.lib}/lib"
