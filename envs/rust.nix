@@ -1,9 +1,10 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> { } }:
 
 pkgs.mkShell {
   buildInputs = [
     pkgs.rustup
     pkgs.pkg-config
+    pkgs.rust-analyzer
 
     # Common build tools
     pkgs.cmake
