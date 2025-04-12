@@ -11,7 +11,7 @@ nix-channel --update
 rm -rf ~/.config/home-manager
 
 # clone the private nixos-home repo in ~/.config/home-manager
-git clone https://github.com/kamou/nixos-home ~/.config/home-manager
+git clone git@github.com:kamou/nixos-home.git ~/.config/home-manager
 
 pushd ~/.config/home-manager
 
