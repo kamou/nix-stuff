@@ -110,6 +110,8 @@ in
     };
   };
 
+  services.udisks2.enable = true;
+  services.devmon.enable = true;
   services.upower.enable = true;
   services.power-profiles-daemon.enable = true;
 
