@@ -5,7 +5,10 @@ set -e
 # enable home-manager and unstable nixpkgs channels
 nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz
 nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs-unstable
+nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz home-manager
+
 nix-channel --update
+nix-shell '<home-manager>' -A install
 
 # remove the default home-manager home.nix configuration
 rm -rf ~/.config/home-manager
