@@ -110,6 +110,8 @@ in
     };
   };
 
+  services.upower.enable = true;
+  services.power-profiles-daemon.enable = true;
 
   users.users."${username}".shell = pkgs.zsh;
 
