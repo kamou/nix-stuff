@@ -46,6 +46,8 @@ in
     spotify
     libsecret
     pass-wayland
+    gnupg
+    pinentry
   ];
 
   services.xserver.enable = true;
@@ -118,6 +120,13 @@ in
   services.power-profiles-daemon.enable = true;
 
   programs.nm-applet.enable = true;
+  services.passSecretService.enable = true;
+
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = false;
+  };
+
   users.users."${username}".shell = pkgs.zsh;
 
 
