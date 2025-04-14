@@ -45,6 +45,7 @@ in
     power-profiles-daemon
     spotify
     libsecret
+    pass-wayland
   ];
 
   services.xserver.enable = true;
