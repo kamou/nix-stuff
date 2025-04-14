@@ -45,6 +45,7 @@ in
     power-profiles-daemon
     spotify
     libsecret
+    keepassxc
   ];
 
   services.xserver.enable = true;
