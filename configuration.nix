@@ -44,6 +44,7 @@ in
     upower
     power-profiles-daemon
     spotify
+    libsecret
   ];
 
   services.xserver.enable = true;
